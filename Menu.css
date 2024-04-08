@@ -1,0 +1,580 @@
+:root {
+  --color-primary: #002f3f;
+  --color-primary-light: #01597f;
+  --color-3: #5880b2;
+  --color-4: #00dd44;
+  --color-5: #00c6a1;
+  --color-6: #21bac9;
+  --color-7: #ffffff;
+}
+/* Import all Roboto fonts from FUENTES directory */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100; /* Thin, Thin Italic */
+  src: url("FUENTES/Roboto-Thin.ttf") format("truetype"),
+    url("FUENTES/Roboto-ThinItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300; /* Light, Light Italic */
+  src: url("FUENTES/Roboto-Light.ttf") format("truetype"),
+    url("FUENTES/Roboto-LightItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400; /* Regular, Italic */
+  src: url("FUENTES/Roboto-Regular.ttf") format("truetype"),
+    url("FUENTES/Roboto-Italic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500; /* Medium, Medium Italic */
+  src: url("FUENTES/Roboto-Medium.ttf") format("truetype"),
+    url("FUENTES/Roboto-MediumItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700; /* Bold, Bold Italic */
+  src: url("FUENTES/Roboto-Bold.ttf") format("truetype"),
+    url("FUENTES/Roboto-BoldItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900; /* Black, Black Italic */
+  src: url("FUENTES/Roboto-Black.ttf") format("truetype"),
+    url("FUENTES/Roboto-BlackItalic.ttf") format("truetype") italic;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  width: fit-content;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sidebar-content {
+  max-width: 425px;
+  width: 0;
+  height: 100%;
+  padding: 20px 0;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: width 0.4s ease-out;
+  box-shadow: 5px 0 20px 5px rgba(181, 181, 181, 0.92);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sidebar-content.expanded {
+  width: 40vw;
+}
+
+@media (max-width: 800px) {
+  .sidebar-content.expanded {
+    width: 100vw;
+  }
+}
+
+.main-logo-img {
+  margin: 20px 0;
+  max-height: 125px;
+}
+
+.user-section {
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+
+.user-img {
+  border-radius: 50%;
+  max-width: 100px;
+  width: 50%;
+}
+
+.user-name {
+  margin: 15px 0;
+  font-size: min(1.6em, max(1.2vw, 16px));
+}
+
+.user-role {
+  font-size: min(1.4em, max(1vw, 14px));
+  font-weight: 900;
+  color: #21bac9;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.menu-item {
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-out;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 20px 10px rgba(1, 89, 128, 0.8);
+  cursor: pointer;
+}
+
+.last-item {
+  margin-top: 8%;
+}
+
+.menu-item-logo {
+  max-height: 25px; /* Adjust the height of the icon as needed */
+  min-height: 10px;
+  height: 1vw;
+}
+
+.menu-item-title {
+  color: #ffffff;
+  font-size: min(18px, max(1.2vw, 16px));
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+.menu-item-btn {
+  margin-left: auto; /* Push the button to the end of the menu item */
+}
+
+.logo-img {
+  margin-top: auto;
+  margin-bottom: 8%;
+  max-height: 100px;
+  min-height: 50px;
+  height: 20vw;
+}
+
+.toggle-btn {
+  width: min(80px, max(50px, 8vw));
+  padding-left: calc(0.6 * min(80px, max(50px, 8vw)));
+  padding-top: calc(0.25 * min(80px, max(50px, 8vw)));
+  padding-bottom: calc(0.25 * min(80px, max(50px, 8vw)));
+  padding-right: calc(0.1 * min(80px, max(50px, 8vw)));
+
+  border-radius: 50%;
+  background-color: lightgray;
+  color: #ffffff;
+  margin-left: calc(-0.5 * min(80px, max(50px, 8vw)));
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #3f3f3f;
+  cursor: pointer;
+}
+
+.content {
+  height: 100vh;
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .content.expanded {
+    margin-left: min(425px, 40vw);
+  }
+}
+
+.content-header {
+  position: sticky;
+  min-height: 50px;
+  max-height: 150px;
+  background-color: var(--color-primary-light);
+  padding: 0 min(50px, max(2vw, 10px));
+  z-index: 10;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.user-session-settings {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-icon {
+  cursor: pointer;
+  height: 30px;
+}
+
+.navbar-mini-icon {
+  height: 5px;
+}
+
+.user-session-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-pfp {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.portal-main {
+  flex: 1;
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.portal-video {
+  width: 70%;
+}
+
+.portal-options-container {
+  width: 70%;
+  margin-top: 20px;
+}
+
+.portal-options-header {
+  display: flex;
+}
+
+.portal-options-home-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.portal-options-btn-label {
+  margin-left: 10px;
+}
+
+.portal-options-title {
+  font-weight: 500;
+  color: var(--color-primary);
+  font-size: 28px;
+}
+
+.portal-options-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.portal-option {
+  flex: 1 0 45%; /* Each item takes up 50% of the container's width */
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  min-width: 250px;
+}
+
+.option-description {
+  height: 100%;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.option-title {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: min(max(12px, 2vw), 24px);
+}
+
+.option-title,
+.option-subtitle {
+  font-size: min(max(10px, 1.5vw), 16px);
+  max-width: 200px;
+}
+
+.option-img {
+  padding: 20px;
+  max-height: 100%;
+  width: 30%;
+  background-color: #21bac9;
+}
+
+/* Overall menu styling */
+.dropdown-session-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+  font-family: Roboto, sans-serif;
+  max-width: 250px; /* Optional: Limit width */
+}
+
+.not-visible {
+  display: none;
+}
+
+/* Individual session options */
+.session-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.session-option:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.session-option:hover {
+  background-color: #f5f5f5;
+}
+
+/* Option icons and labels */
+.session-option-icon {
+  width: 15px;
+  margin-right: 15px;
+}
+
+.session-option-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Specific styling for the log-off option */
+.log-off-option p {
+  color: #d50000; /* Material Design red for log-off */
+}
+
+/* Floating form styles */
+
+.floating-form {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  z-index: 800;
+}
+
+.form-header {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  color: #ffffff;
+}
+
+.form-body,
+.form-section {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 20px;
+}
+
+.form-sub-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.form-text {
+  font-size: 16px;
+  color: #999999;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-group label {
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 20px 10px rgba(1, 89, 128, 0.8);
+  cursor: pointer;
+}
+
+.portal-option:hover {
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #3f3f3f;
+  cursor: pointer;
+}
+
+.portal-options-home-btn:hover {
+  color: var(--color-3);
+}
+
+.link-container a:hover {
+  color: var(--color-3);
+}
+
+.user-session-container .user-pfp:hover {
+  opacity: 0.8; /* Add a slight opacity change on hover */
+  cursor: pointer;
+}
+
+.portal-options-menu .portal-option:nth-child(odd):hover {
+  background-color: var(--color-5); /* Alternate hover color for odd options */
+}
+
+/* Floating notification styles */
+
+.floating-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  color: #01597f;
+  z-index: 2;
+}
+
+.floating-notification-close-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.floating-notification-close-btn {
+  border: none;
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.floating-notification-title-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 8px;
+}
+
+.floating-notification-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+  filter: invert(0.5);
+}
+
+.floating-notification-text {
+  font-size: 16px;
+}
+
+.floating-notification-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Page mask styles */
+
+#page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}

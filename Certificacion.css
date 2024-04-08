@@ -1,0 +1,110 @@
+/* Estilos del contenedor principal */
+
+.certificacion-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Estilos del título de certificación */
+
+.certificacion-title-container {
+  height: 35px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.certificacion-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.certificacion-subtitle-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.certificacion-icon {
+  min-width: 20px;
+  min-height: 24px;
+  height: 80%;
+}
+
+.certificacion-sub-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #01597f;
+}
+
+/* Estilos del contenedor de documentos */
+
+.documents-container {
+  padding: 20px 0;
+}
+
+.documents-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.document-icon {
+  height: 24px;
+}
+
+.documents-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #01597f;
+}
+
+/* Estilos de la tabla de documentos */
+
+.documents-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.documents-table-header {
+  background-color: #f0f0f0;
+}
+
+.documents-table-header th {
+  padding: 10px;
+  border-bottom: 2px solid #000;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.document-table-row:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.table-item {
+  padding: 10px;
+  color: #01597f;
+}
+
+.center-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de imagen de documento */
+
+.documents-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.header-item {
+  color: #21bac9;
+  font-weight: 400;
+}

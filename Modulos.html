@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Tutorial</title>
+    <link rel="stylesheet" href="Menu.css" />
+    <link rel="stylesheet" href="Especializacion.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-content" id="side-menu">
+        <img src="iconos-23/iconos-33.png" class="main-logo-img" />
+        <div class="user-section">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="userImg"
+            class="user-img"
+          />
+          <p class="user-name">Nombre del Estudiante</p>
+          <p class="user-role">ESTUDIANTE</p>
+        </div>
+        <div class="menu">
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-35.png"
+              alt="Home"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Inicio</p>
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-42.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Especialización</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-37.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Mi Calendario</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-38.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Certificación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-39.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Información Económica</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item last-item">
+            <img
+              src="iconos-23/iconos-40.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Tutorial de Navegación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item exit-item" onclick="toggleSidebar()"> 
+            <p class="menu-item-title">Regresar</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <!-- You can add more menu items here -->
+        </div>
+        <img src="iconos-23/iconos-26.png" class="logo-img" />
+      </div>
+      <img
+        src="iconos-23/iconos-53.png"
+        alt="Show"
+        class="toggle-btn"
+        onclick="toggleSidebar()"
+      />
+    </aside>
+    <main id="main-view" class="content">
+      <div class="content-header">
+        <nav class="navbar">
+          <div class="link-container">
+            <a href="#facebook_" class="navbar-link"
+              ><img src="iconos-23/iconos-29.png" alt="FB" class="navbar-icon"
+            /></a>
+            <a href="#instagram" class="navbar-link"
+              ><img src="iconos-23/iconos-30.png" alt="IG" class="navbar-icon"
+            /></a>
+            <a href="#youtube__" class="navbar-link"
+              ><img src="iconos-23/iconos-31.png" alt="YT" class="navbar-icon"
+            /></a>
+            <a href="#linkedin_" class="navbar-link"
+              ><img src="iconos-23/iconos-32.png" alt="Li" class="navbar-icon"
+            /></a>
+          </div>
+          <div class="user-session-container">
+            <img src="iconos-23/iconos-52.png" alt="Noti" class="navbar-icon" />
+            <a href="#user" class="user-session-configuration"
+              ><img
+                src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                alt="user"
+                class="navbar-icon user-pfp"
+            /></a>
+            <div
+              href=""
+              class="user-session-settings"
+              onclick="showSessionDropMenu()"
+            >
+              <img
+                src="resources/iconos-68.png"
+                alt="Off"
+                class="navbar-icon"
+              />
+              <img
+                src="resources/iconos-69.png"
+                alt=""
+                class="navbar-mini-icon"
+              />
+            </div>
+            <div class="dropdown-session-menu not-visible" id="session-menu">
+              <div class="session-option">
+                <img
+                  src="resources/iconos-77.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cambiar Contraseña</p>
+              </div>
+              <div class="session-option log-off-option">
+                <img
+                  src="resources/iconos-78.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cerrar Sesión</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="portal-main">
+        <img
+          src="https://blogs.unitec.mx/hubfs/287524/Imported_Blog_Media/en-que-trabaja-un-egresado-de-ingenieria-industrial-y-administracion-1-Dec-17-2022-05-47-49-4510-PM.jpg"
+          alt=""
+          class="especialidad-poster"
+        />
+        <div class="especialidad-menu-container">
+          <div class="especialidad-menu-title-container">
+            <p class="especialidad-menu-title">MIS ESPECIALIZACIONES</p>
+            <div class="especialidad-menu-sub-title-container">
+              <img
+                src="iconos-23/iconos-36.png"
+                alt=""
+                class="especialidad-icon"
+              />
+              <p class="especialidad-sub-title">Especialización</p>
+            </div>
+            <button class="especialidad-menu-btn modulo-option-btn">
+              <img src="resources/iconos-75.png" alt="" class="regresar-icon" />
+              <p class="regresar-label">REGRESAR</p>
+            </button>
+          </div>
+          <div class="modulos-container">
+            <div class="modulos-option-list">
+              <button class="modulo-option-btn dropdown-controller bg-darkcyan" id="dropdown-controller" onclick="showDropDown()">
+                <p class="modulo-option-label" id="modulo-controller">Módulo 1</p>
+                <img
+                  src="resources/iconos-73.png"
+                  alt=""
+                  class="modulo-option-icon"
+                />
+                <div class="dropdown-list not-visible" id="modulo-dropmenu">
+                  <div class="dropdown-btn" id="drop1" onclick="showModulo('drop1')">Módulo 2</div>
+                  <div class="dropdown-btn" id="drop2" onclick="showModulo('drop2')">Módulo 3</div>
+                </div>
+              </button>
+              
+              <button class="modulo-option-btn bg-lightcyan">
+                Materiales de la clase
+              </button>
+              <button class="modulo-option-btn bg-lightgreen">
+                Clase en vivo
+              </button>
+            </div>
+            <div class="modulos-card-sessions-container" id="modulo1">
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-22.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-23.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-24.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-25.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+            </div>
+            <div class="modulos-card-sessions-container not-visible" id="modulo2">
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-26.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-27.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-28.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-29.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+            </div>
+            <div class="modulos-card-sessions-container not-visible" id="modulo3">
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-30.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-31.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-27.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+              <div class="modulo-card">
+                <div class="modulo-card-date-container">
+                  <p class="card-date">INICIO: 09/04/2024</p>
+                </div>
+                <div class="bg-lightgreen modulo-card-extra-icon-container ">
+                  <img
+                    src="resources/iconos-76.png"
+                    alt=""
+                    class="card-extra-icon"
+                  />
+                </div>
+                <div class="modulo-card-poster-container">
+                  <img src="resources/DIPLOMAS PRODUCTOS-21.png" alt="" class="modulo-card-poster"/>
+                </div>
+                <div class="modulo-card-details-container">
+                  <p class="modulo-card-title">SESIÓN 1</p>
+                  <p class="modulo-card-sub-tile">TEMA DE LA SESIÓN</p>
+                </div>
+                <button class="modulo-card-btn bg-lightgreen">INGRESAR</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="Menu.js"></script>
+    <script src="Modulos.js"></script>
+  </body>
+</html>

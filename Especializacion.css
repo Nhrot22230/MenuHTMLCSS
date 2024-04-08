@@ -1,0 +1,407 @@
+.portal-main {
+  padding: 0;
+}
+
+.especialidad-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.especialidad-menu-container {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.especialidad-menu-title-container {
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+@media (max-width: 450px) {
+  .especialidad-menu-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .portal-main {
+    width: 100vw;
+  }
+}
+
+.especialidad-menu-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.especialidad-menu-sub-title-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.especialidad-icon {
+  max-height: 24px;
+}
+
+.especialidad-sub-title {
+  margin-left: 5px;
+  font-size: 18px;
+  color: #666;
+}
+
+.especialidad-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.especialidad-card {
+  min-width: 260px;
+  max-width: 425px;
+  width: calc(45%);
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-poster {
+  width: 100%;
+  height: auto;
+}
+
+.card-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-sub-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  max-width: 24px;
+}
+
+.card-sub-title {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-btn {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+  background-color: #0d8aed;
+}
+
+.card-sub-label {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.especialidad-menu-btn {
+  padding: 10px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00dd44;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.regresar-icon {
+  height: 20px;
+}
+
+.regresar-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modulos-option-list {
+  padding: 20px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.modulo-option-btn {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.modulo-option-btn:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  z-index: 700; /* Ensure menu is on top of other elements */
+  min-width: 160px; /* Set a minimum width for the menu */
+}
+
+.dropdown-btn {
+  color: #01597f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.dropdown-btn:hover {
+  background-color: #f5f5f5; /* Light hover effect for dropdown items */
+}
+
+.modulo-option-icon {
+  height: 10px;
+}
+
+.modulos-card-sessions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modulo-card {
+  position: relative; /* Make the container position relative */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 300px;
+  width: 40vw;
+  max-width: 400px;
+}
+
+.modulo-card-date-container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.modulo-card-extra-icon-container {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.card-extra-icon {
+  display: block;
+  height: 24px;
+}
+
+.modulo-card-poster-container {
+  width: 100%;
+  height: auto;
+  background-color: #01597f;
+}
+
+.modulo-card-poster {
+  display: block;
+  width: 100%;
+}
+
+.modulo-card-details-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0;
+}
+
+.modulo-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.modulo-card-sub-tile {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.modulo-card-btn {
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modulo-card-btn:hover {
+  background-color: #388e3c;
+}
+
+.bg-darkcyan {
+  background-color: #01597f;
+}
+
+.bg-lightcyan {
+  background-color: #21bac9;
+}
+
+.bg-lightgreen {
+  background-color: #00dd44;
+}
+
+.not-visible {
+  display: none;
+}
+
+.modulo-material-container {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.modulo-material-controller, .extra-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modulo-material-controller {
+  flex: 1;
+  padding: 0 50px;
+}
+
+.modulo-material-list-container {
+  flex: 3;
+  padding: 10px;
+}
+
+.modulo-material-header-list-controller {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.modulo-material-icon {
+  height: 20px;
+}
+
+/* Base styles */
+/* Estilos generales */
+.material-table-container {
+  padding: 30px;
+  display: flex;
+}
+
+.materal-table {
+  width: 100%;
+  min-width: 400px;
+  max-width: 800px; /* Cambia el valor según tus necesidades */
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  border: 1px solid #ddd; /* Añade bordes según sea necesario */
+  border-collapse: collapse;
+}
+
+.material-header-row,
+.material-table-row {
+  display: contents;
+}
+
+.material-header-row .material-table-header-item,
+.material-table-row .material-table-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Añade bordes según sea necesario */
+}
+
+.material-header-row .material-table-header-item {
+  font-weight: bold;
+}
+
+.material-table-item .table-cell {
+  display: flex;
+  align-items: center;
+}
+
+.material-table-item .table-cell p {
+  margin: 0;
+  margin-left: 10px; /* Ajusta el espacio entre el ícono y el texto */
+}
+
+/* Estilos específicos para los íconos */
+.material-table-item .table-cell img {
+  height: 24px; /* Ajusta el tamaño según sea necesario */
+}

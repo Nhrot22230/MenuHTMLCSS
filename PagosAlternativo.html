@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Tutorial</title>
+    <link rel="stylesheet" href="Menu.css" />
+    <link rel="stylesheet" href="PagosPendientes.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-content" id="side-menu">
+        <img src="iconos-23/iconos-33.png" class="main-logo-img" />
+        <div class="user-section">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="userImg"
+            class="user-img"
+          />
+          <p class="user-name">Nombre del Estudiante</p>
+          <p class="user-role">ESTUDIANTE</p>
+        </div>
+        <div class="menu">
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-35.png"
+              alt="Home"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Inicio</p>
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-36.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Especialización</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-37.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Mi Calendario</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-38.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Certificación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-39.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Información Económica</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item last-item">
+            <img
+              src="iconos-23/iconos-40.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Tutorial de Navegación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item exit-item" onclick="toggleSidebar()"> 
+            <p class="menu-item-title">Regresar</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <!-- You can add more menu items here -->
+        </div>
+        <img src="iconos-23/iconos-26.png" class="logo-img" />
+      </div>
+      <img
+        src="iconos-23/iconos-53.png"
+        alt="Show"
+        class="toggle-btn"
+        onclick="toggleSidebar()"
+      />
+    </aside>
+    <main id="main-view" class="content">
+      <div class="content-header">
+        <nav class="navbar">
+          <div class="link-container">
+            <a href="#facebook_" class="navbar-link"
+              ><img src="iconos-23/iconos-29.png" alt="FB" class="navbar-icon"
+            /></a>
+            <a href="#instagram" class="navbar-link"
+              ><img src="iconos-23/iconos-30.png" alt="IG" class="navbar-icon"
+            /></a>
+            <a href="#youtube__" class="navbar-link"
+              ><img src="iconos-23/iconos-31.png" alt="YT" class="navbar-icon"
+            /></a>
+            <a href="#linkedin_" class="navbar-link"
+              ><img src="iconos-23/iconos-32.png" alt="Li" class="navbar-icon"
+            /></a>
+          </div>
+          <div class="user-session-container">
+            <img src="iconos-23/iconos-52.png" alt="Noti" class="navbar-icon" />
+            <a href="#user" class="user-session-configuration"
+              ><img
+                src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                alt="user"
+                class="navbar-icon user-pfp"
+            /></a>
+            <div
+              href=""
+              class="user-session-settings"
+              onclick="showSessionDropMenu()"
+            >
+              <img
+                src="resources/iconos-68.png"
+                alt="Off"
+                class="navbar-icon"
+              />
+              <img
+                src="resources/iconos-69.png"
+                alt=""
+                class="navbar-mini-icon"
+              />
+            </div>
+            <div class="dropdown-session-menu not-visible" id="session-menu">
+              <div class="session-option">
+                <img
+                  src="resources/iconos-77.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cambiar Contraseña</p>
+              </div>
+              <div class="session-option log-off-option">
+                <img
+                  src="resources/iconos-78.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cerrar Sesión</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="portal-main">
+        <div class="pagos-container">
+          <div class="pagos-title-container">
+            <p class="pagos-title">TUTORIAL GENERAL</p>
+            <div class="pagos-sub-title-container">
+              <img src="iconos-23/iconos-39.png" alt="" class="pagos-icon" />
+              <p class="pagos-sub-title">Tutorial de navegación</p>
+            </div>
+          </div>
+          <div class="pagos-lista-container sin-pagos">
+            <div class="pago-mensaje-container">
+              <img
+                src="resources/iconos-80.png"
+                alt=""
+                class="pago-mensaje-icon"
+              />
+              <p class="pago-mensaje-title">¡Felicidades!</p>
+              <p class="pago-mensaje-sub-title">No tienes pagos pendientes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="Menu.js"></script>
+  </body>
+</html>

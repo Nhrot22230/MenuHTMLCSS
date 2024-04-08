@@ -1,0 +1,246 @@
+/* Constants */
+:root {
+  /* Colors */
+  --color-1: #002F3F;
+  --color-2: #01597F;
+  --color-3: #5880B2;
+  --color-4: #00DD44;
+  --color-5: #00C6A1;
+  --color-6: #21BAC9;
+  --color-7: #FFFFFF;
+
+  --color-card-bg: white; /* Card background color */
+
+  /* Card Dimensions */
+  --card-h: 350px; /* Card height */
+  --card-w: 375px; /* Card width */
+  
+  /* Card Effects */
+  --card-border-radius: 40px; /* Border radius for cards */
+  --card-shadow: 0 16px 32px rgba(0, 0, 0, 0.1); /* Shadow effect for cards */
+  --card-hover-shadow: 0 32px 64px rgba(0, 0, 0, 0.2); /* Shadow effect for hover */
+  --card-img-margin: 10px;
+  --card-img-h: 50%; /* Height of the card images */
+  --card-img-w: auto; /* Width of the card images */
+
+  /* Font sizes */
+  --font-title: 4vw;
+  --font-subtitle: 2vw;
+  --font-size: 1em; /* Base font size */
+  --font-size-small: 0.75em; /* Small font size */
+  --font-size-medium: 1.5em; /* Medium font size */
+  --font-size-large: 2em; /* Large font size */
+
+  /* Padding */
+  --spacing: 30px; /* Spacing between elements */
+  --card-padding-h: 1vw; /* Horizontal padding */
+  --card-padding-v: 1vh; /* Vertical padding */
+}
+
+/* Import all Roboto fonts from FUENTES directory */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100; /* Thin, Thin Italic */
+  src: url("FUENTES/Roboto-Thin.ttf") format("truetype"),
+    url("FUENTES/Roboto-ThinItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300; /* Light, Light Italic */
+  src: url("FUENTES/Roboto-Light.ttf") format("truetype"),
+    url("FUENTES/Roboto-LightItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400; /* Regular, Italic */
+  src: url("FUENTES/Roboto-Regular.ttf") format("truetype"),
+    url("FUENTES/Roboto-Italic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500; /* Medium, Medium Italic */
+  src: url("FUENTES/Roboto-Medium.ttf") format("truetype"),
+    url("FUENTES/Roboto-MediumItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700; /* Bold, Bold Italic */
+  src: url("FUENTES/Roboto-Bold.ttf") format("truetype"),
+    url("FUENTES/Roboto-BoldItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900; /* Black, Black Italic */
+  src: url("FUENTES/Roboto-Black.ttf") format("truetype"),
+    url("FUENTES/Roboto-BlackItalic.ttf") format("truetype") italic;
+}
+
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+img {
+  pointer-events: none; /* Avoid drag */
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-7);
+  display: flex; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  min-height: 100vh; /* Set minimum viewport height */
+  align-items: center; /* Center content vertically and horizontally (flexbox) */
+}
+
+.login-background-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8; /* Reduce general opacity */
+}
+
+.login-background-logo{
+  width: 40%;
+  bottom: 3%;
+  left: 5%;
+  position: fixed;
+  z-index: -1;
+}
+
+/* Login Container Styles */
+.login-container {
+  text-align: center; /* Center content within container */
+}
+
+/* Login Title Styles */
+.login-title {
+  margin: var(--spacing);
+  color: var(--color-4); /* Green title using secondary color */
+  font-size: max(var(--font-title), var(--font-size-large)); /* Increase title size */
+  font-weight: 900;
+}
+
+/* Login Subtitle Styles */
+.login-subtitle {
+  color: var(--color-7);
+  font-weight: 400;
+  font-size: max(var(--font-subtitle), var(--font-size-medium)); /* Responsive font size */
+}
+
+/* Login Options Container Styles */
+.login-options-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw; /* Spacing between cards */
+  flex-wrap: wrap; /* Wrap cards on small screens (responsive) */
+  margin: 4vh 3vw;
+}
+
+.login-options-container a {
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Login Card Styles */
+.login-card {
+  width:  min(var(--card-w), max(50vw, 250px));
+  height: min(var(--card-h), max(40vh, 200px));
+  background-color: var(--color-card-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  padding: var(--card-padding-v) var(--card-padding-h); /* Apply padding */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for login-card */
+.login-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-5px); /* Move card up slightly on hover */
+}
+
+/* Login Card Image Styles */
+.login-card img {
+  height: var(--card-img-h);
+  width: var(--card-img-w);
+  margin-bottom: 5%;
+  object-fit: cover;
+}
+
+/* Login Card Paragraph Styles */
+.login-card p {
+  margin: 0;
+  font-size: var(--font-size-large);
+  font-weight: 500;
+  color: var(--color-2);
+}
+
+/* Contact buttons styles */
+.contact-buttons {
+  position: fixed;
+  bottom: 5%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-wrapper {
+  margin-bottom: 10px;
+}
+
+#whatsapp-btn {
+  background-color: #00dd44;
+}
+
+#email-btn {
+  background-color: #21bac9;
+}
+.contact-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 40px 0 0 40px;
+  max-width: 200px;
+  transition: width 1s ease;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  width: 100%; /* Adjust as needed */
+}
+
+.contact-btn-icon {
+  height: 60px;
+}
+
+.dropdown-msg {
+  width: 100px;
+  font-weight: 400;
+  color: #fff;
+  display: none;
+}
+
+.contact-btn:hover .dropdown-msg {
+  margin-left: 10px;
+  display: block;
+}

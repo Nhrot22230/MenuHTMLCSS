@@ -1,0 +1,69 @@
+.portal-main {
+    padding: 0;
+    width: 100%;
+}
+
+.navegacion-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.navegacion-container {
+    width: 100%;
+    padding: 40px;
+}
+
+.navegacion-title-container {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+@media (max-width: 450px) {
+    .navegacion-title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .portal-main {
+        width: 100vw;
+    }
+}
+
+.navegacion-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navegacion-sub-title-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navegacion-icon {
+    max-height: 24px;
+}
+
+.navegacion-sub-title {
+    margin-left: 5px;
+    font-size: 18px;
+    color: #666;
+}
+
+.tutoriales-container {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutorial-video {
+    min-width: 300px;
+    max-width: 1000px;
+    width: 100%;
+}

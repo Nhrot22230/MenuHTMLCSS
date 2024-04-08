@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario</title>
+    <link rel="stylesheet" href="Menu.css" />
+    <link rel="stylesheet" href="Calendario.css" />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-content" id="side-menu">
+        <img src="iconos-23/iconos-33.png" class="main-logo-img" />
+        <div class="user-section">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+            alt="userImg"
+            class="user-img"
+          />
+          <p class="user-name">Nombre del Estudiante</p>
+          <p class="user-role">ESTUDIANTE</p>
+        </div>
+        <div class="menu">
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-35.png"
+              alt="Home"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Inicio</p>
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-36.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Especialización</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-43.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Mi Calendario</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-38.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Certificación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item">
+            <img
+              src="iconos-23/iconos-39.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Información Económica</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item last-item">
+            <img
+              src="iconos-23/iconos-40.png"
+              alt="Esp"
+              class="menu-item-logo"
+            />
+            <p class="menu-item-title">Tutorial de Navegación</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <div class="menu-item exit-item" onclick="toggleSidebar()">
+            <p class="menu-item-title">Regresar</p>
+            <img
+              src="iconos-23/iconos-53.png"
+              alt="Show"
+              class="menu-item-logo menu-item-btn"
+            />
+          </div>
+          <!-- You can add more menu items here -->
+        </div>
+        <img src="iconos-23/iconos-26.png" class="logo-img" />
+      </div>
+      <img
+        src="iconos-23/iconos-53.png"
+        alt="Show"
+        class="toggle-btn"
+        onclick="toggleSidebar()"
+      />
+    </aside>
+    <main id="main-view" class="content">
+      <div class="content-header">
+        <nav class="navbar">
+          <div class="link-container">
+            <a href="#facebook_" class="navbar-link"
+              ><img src="iconos-23/iconos-29.png" alt="FB" class="navbar-icon"
+            /></a>
+            <a href="#instagram" class="navbar-link"
+              ><img src="iconos-23/iconos-30.png" alt="IG" class="navbar-icon"
+            /></a>
+            <a href="#youtube__" class="navbar-link"
+              ><img src="iconos-23/iconos-31.png" alt="YT" class="navbar-icon"
+            /></a>
+            <a href="#linkedin_" class="navbar-link"
+              ><img src="iconos-23/iconos-32.png" alt="Li" class="navbar-icon"
+            /></a>
+          </div>
+          <div class="user-session-container">
+            <img src="iconos-23/iconos-52.png" alt="Noti" class="navbar-icon" />
+            <a href="#user" class="user-session-configuration"
+              ><img
+                src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                alt="user"
+                class="navbar-icon user-pfp"
+            /></a>
+            <div
+              href=""
+              class="user-session-settings"
+              onclick="showSessionDropMenu()"
+            >
+              <img
+                src="resources/iconos-68.png"
+                alt="Off"
+                class="navbar-icon"
+              />
+              <img
+                src="resources/iconos-69.png"
+                alt=""
+                class="navbar-mini-icon"
+              />
+            </div>
+            <div class="dropdown-session-menu not-visible" id="session-menu">
+              <div class="session-option">
+                <img
+                  src="resources/iconos-77.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cambiar Contraseña</p>
+              </div>
+              <div class="session-option log-off-option">
+                <img
+                  src="resources/iconos-78.png"
+                  alt=""
+                  class="session-option-icon"
+                />
+                <p class="session-option-label">Cerrar Sesión</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="portal-main">
+        <div class="title-container">
+          <p class="title">CALENDARIO ACADÉMICO</p>
+          <div class="sub-title-container">
+            <img
+              src="iconos-23/iconos-37.png"
+              alt=""
+              class="calendar-icon"
+            />
+            <p class="sub-title">Mi Calendario</p>
+          </div>
+        </div>
+        <div class="calendar-legend-container">
+          <div class="calendar-legend-item">
+            <div
+              class="calendar-legend-color"
+              style="background-color: red"
+            ></div>
+            <p class="calendar-legend-text">Taller, Charla o Webinar</p>
+          </div>
+          <div class="calendar-legend-item">
+            <div
+              class="calendar-legend-color"
+              style="background-color: forestgreen"
+            ></div>
+            <p class="calendar-legend-text">Clase en vivo</p>
+          </div>
+          <div class="calendar-legend-item">
+            <div
+              class="calendar-legend-color"
+              style="background-color: cyan"
+            ></div>
+            <p class="calendar-legend-text">Clase introductoria</p>
+          </div>
+        </div>
+        <div class="item-content-navbar">
+          <div class="item-content-navbar-item selected-navbar-item">
+            <p class="item-content-text">Calendario</p>
+          </div>
+          <div class="item-content-navbar-separator"></div>
+        </div>
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <div class="calendar-nav">
+              <button class="calendar-nav-btn" id="prev-month"><</button>
+              <button class="calendar-nav-btn" id="next-month">></button>
+              <button class="calendar-nav-btn" id="next-month">Hoy</button>
+            </div>
+            <h1 class="calendar-title">marzo 2024</h1>
+            <div class="calendar-nav">
+              <button class="calendar-nav-btn" id="next-month">Mes</button>
+            </div>
+          </div>
+          <div class="calendar">
+            <div class="calendar-weekdays">
+              <div class="calendar-weekday">Dom</div>
+              <div class="calendar-weekday">Lun</div>
+              <div class="calendar-weekday ocupado-day">Mar</div>
+              <div class="calendar-weekday">Mie</div>
+              <div class="calendar-weekday">Jue</div>
+              <div class="calendar-weekday">Vie</div>
+              <div class="calendar-weekday ocupado-day">Sab</div>
+            </div>
+            <div class="calendar-days">
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">27</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">28</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">29</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">30</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">31</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">1</p>
+              </div>
+              <div class="calendar-day ocupado-day">
+                <p class="calendar-day-number">2</p>
+                <div class="day-event clase-event">
+                    <div class="day-event-label-container">
+                        <p class="day-event-text day-event-number">17</p>
+                        <p class="day-event-text">CURSO FICHAS E IOARR</p>
+                    </div>
+                    <div class="day-event-label-container">
+                      <p class="day-event-text">SESIÓN DE BIENVENIDA</p>
+                    </div>
+                    <div class="day-event-label-container">
+                        <p class="day-event-text">DOCENTE:</p>
+                        <p class="day-event-text">RIVAS WHARTON</p>
+                    </div>
+                    <div class="day-event-label-container">
+                        <p class="day-event-text">ESTADO:</p>
+                        <p class="day-event-status event-status-realizado">Realizado</p>
+                    </div>
+                </div>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">3</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">4</p>
+              </div>
+              <div class="calendar-day ocupado-day">
+                <p class="calendar-day-number">5</p>
+                <div class="day-event taller-event">
+                    <div class="day-event-label-container">
+                        <p class="day-event-text day-event-number">17</p>
+                        <p class="day-event-text">CONTRATACIONES CON EQUIPO</p>
+                    </div>
+                    <div class="day-event-label-container">
+                      <p class="day-event-text">CLASE EN VIVO</p>
+                    </div>
+                    <div class="day-event-label-container">
+                        <p class="day-event-text">DOCENTE:</p>
+                        <p class="day-event-text">RIVAS WHARTON</p>
+                    </div>
+                    <div class="day-event-label-container">
+                        <p class="day-event-text">ENLACE:</p>
+                        <p class="day-event-text day-event-enlace">VIDEO</p>
+                    </div>
+                    <div class="day-event-label-container">
+                        <p class="day-event-text">ESTADO:</p>
+                        <p class="day-event-status event-status-realizado">Realizado</p>
+                    </div>
+                </div>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">6</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">7</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">8</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">9</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">10</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">11</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">12</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">13</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">14</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">15</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">16</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">17</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">18</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">19</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">20</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">21</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">22</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">23</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">24</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">25</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">26</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">27</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">28</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">29</p>
+              </div>
+              <div class="calendar-day">
+                <p class="calendar-day-number">30</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">1</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">2</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">3</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">4</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">5</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">6</p>
+              </div>
+              <div class="calendar-day other-month">
+                <p class="calendar-day-number">7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="Menu.js"></script>
+  </body>
+</html>

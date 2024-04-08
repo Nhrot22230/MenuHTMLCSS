@@ -1,0 +1,259 @@
+/* Define color variables */
+:root {
+  --color-primary: #002f3f;
+  --color-primary-light: #01597f;
+  --color-3: #5880b2;
+  --color-4: #00dd44;
+  --color-5: #00c6a1;
+  --color-6: #21bac9;
+  --color-7: #ffffff;
+
+  /* Other constants */
+  --min-card-width: 300px;
+  --card-width: 40vw;
+  --card-padding-vertical: 4vh;
+  --card-padding-horizontal: 3vw;
+  --card-border-radius: 40px;
+  --blue-shadow-offset-x: -20px;
+  --blue-shadow-offset-y: 20px;
+  --blue-shadow-color: var(--color-primary-light);
+  --translate-x: 5%;
+  --translate-y: -5%;
+}
+
+/* Import all Roboto fonts from FUENTES directory */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100; /* Thin, Thin Italic */
+  src: url("FUENTES/Roboto-Thin.ttf") format("truetype"),
+    url("FUENTES/Roboto-ThinItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300; /* Light, Light Italic */
+  src: url("FUENTES/Roboto-Light.ttf") format("truetype"),
+    url("FUENTES/Roboto-LightItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400; /* Regular, Italic */
+  src: url("FUENTES/Roboto-Regular.ttf") format("truetype"),
+    url("FUENTES/Roboto-Italic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500; /* Medium, Medium Italic */
+  src: url("FUENTES/Roboto-Medium.ttf") format("truetype"),
+    url("FUENTES/Roboto-MediumItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700; /* Bold, Bold Italic */
+  src: url("FUENTES/Roboto-Bold.ttf") format("truetype"),
+    url("FUENTES/Roboto-BoldItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900; /* Black, Black Italic */
+  src: url("FUENTES/Roboto-Black.ttf") format("truetype"),
+    url("FUENTES/Roboto-BlackItalic.ttf") format("truetype") italic;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Background styles */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.4; /* Adjust opacity as needed */
+  z-index: -2;
+}
+
+.bg-logo,
+.bg-logo2 {
+  max-width: 400px;
+  width: 30vw;
+  object-fit: contain;
+  z-index: -1;
+  margin: 30px;
+}
+
+@media (max-width: 700px) {
+  .background{
+    flex-direction: row;
+  }
+  .bg-logo, .bg-logo2 {
+    margin-left: 0;
+    width: 45vw;
+  } 
+}
+
+/* Login container styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  max-width: 450px;
+  min-width: var(--min-card-width);
+  height: fit-content;
+  width: var(--card-width);
+  background-color: var(--color-7);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding-vertical) var(--card-padding-horizontal);
+  box-shadow: var(--blue-shadow-offset-x) var(--blue-shadow-offset-y) 0 0
+    var(--blue-shadow-color); /* Blue shadow */
+  transform: translate(
+    var(--translate-x),
+    var(--translate-y)
+  ); /* Translate effect */
+}
+
+/* Login form styles */
+.login-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  max-width: 100px; /* Adjust width as needed */
+  max-height: 100px; /* Adjust height as needed */
+
+  min-width: 50px;
+  min-height: 50px;
+
+  height: 20%;
+}
+
+.login-title {
+  margin-top: 5%;
+  text-align: center;
+  font-size: min(40px, max(2vw, 12px));
+  font-weight: 900;
+  color: var(--color-primary-light);
+}
+
+.input-field {
+  margin-top: 5%;
+  width: 100%;
+  height: 15%;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid var(--color-primary-light);
+}
+
+.input-field,
+.input-field::placeholder,
+.login-btn,
+.forgot-password {
+  font-size: max(1vw, 12px);
+}
+
+.login-btn {
+  margin-top: 5%;
+  width: 40%;
+  padding: 10px;
+  background-color: var(--color-4);
+  color: var(--color-7);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.forgot-password {
+  margin-top: 5%;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Contact buttons styles */
+.contact-buttons {
+  position: fixed;
+  bottom: 5%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-wrapper {
+  margin-bottom: 10px;
+}
+
+#whatsapp-btn {
+  background-color: #00dd44;
+}
+
+#email-btn {
+  background-color: #21bac9;
+}
+.contact-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 40px 0 0 40px;
+  max-width: 200px;
+  transition: width 1s ease;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  width: 100%; /* Adjust as needed */
+}
+
+.contact-btn-icon {
+  height: 60px;
+}
+
+.dropdown-msg {
+  width: 100px;
+  font-weight: 400;
+  color: #fff;
+  display: none;
+}
+
+.contact-btn:hover .dropdown-msg {
+  margin-left: 10px;
+  display: block;
+}
+
+
+

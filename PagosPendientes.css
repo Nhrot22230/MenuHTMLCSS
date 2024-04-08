@@ -1,0 +1,140 @@
+.portal-main {
+    height: calc(100% - 150px);
+    justify-content: flex-start;
+}
+
+.pagos-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagos-title-container {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+@media (max-width: 450px) {
+    .pagos-title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .portal-main {
+        width: 100vw;
+    }
+}
+
+.pagos-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pagos-sub-title-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagos-icon {
+    max-height: 24px;
+}
+
+.pagos-sub-title {
+    margin-left: 5px;
+    font-size: 18px;
+    color: #666;
+}
+
+.pagos-lista-container {
+    flex-grow: 1;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+    gap: 15px;
+}
+
+.sin-pagos {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pago-item {
+    height: 60px;
+    display: flex;
+    gap: 10px;
+}
+
+.pago-item-section {
+    height: 100%;
+    padding: 20px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pago-label-container {
+    max-width: 200px;
+    width: 20vw;
+}
+
+.pago-description-container {
+    max-width: 600px;
+    width: 45vw;
+}
+
+.pago-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #002f3f;
+    margin: 0;
+}
+
+.pago-item-text {
+    width: 100%;
+}
+
+.pago-img-container {
+    background-color: #21bac9;
+}
+
+.pago-item-icon {
+    height: 48px;
+}
+
+.pago-mensaje-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.pago-mensaje-icon {
+    height: 100px;
+}
+
+.pago-mensaje-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.pago-mensaje-sub-title {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.pago-link {
+    color: #00dd44;
+}

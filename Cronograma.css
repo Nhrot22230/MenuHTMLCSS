@@ -1,0 +1,396 @@
+:root {
+  --color-primary: #002f3f;
+  --color-primary-light: #01597f;
+  --color-3: #5880b2;
+  --color-4: #00dd44;
+  --color-5: #00c6a1;
+  --color-6: #21bac9;
+  --color-7: #ffffff;
+}
+/* Import all Roboto fonts from FUENTES directory */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100; /* Thin, Thin Italic */
+  src: url("FUENTES/Roboto-Thin.ttf") format("truetype"),
+    url("FUENTES/Roboto-ThinItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300; /* Light, Light Italic */
+  src: url("FUENTES/Roboto-Light.ttf") format("truetype"),
+    url("FUENTES/Roboto-LightItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400; /* Regular, Italic */
+  src: url("FUENTES/Roboto-Regular.ttf") format("truetype"),
+    url("FUENTES/Roboto-Italic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500; /* Medium, Medium Italic */
+  src: url("FUENTES/Roboto-Medium.ttf") format("truetype"),
+    url("FUENTES/Roboto-MediumItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700; /* Bold, Bold Italic */
+  src: url("FUENTES/Roboto-Bold.ttf") format("truetype"),
+    url("FUENTES/Roboto-BoldItalic.ttf") format("truetype") italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900; /* Black, Black Italic */
+  src: url("FUENTES/Roboto-Black.ttf") format("truetype"),
+    url("FUENTES/Roboto-BlackItalic.ttf") format("truetype") italic;
+}
+
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content-main {
+  min-width: min-content;
+  padding: 40px;
+  overflow: scroll;
+}
+
+.table-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lightblue {
+  background-color: lightblue;
+  opacity: 0.9;
+}
+
+.lightgray {
+  background-color: lightgray;
+  opacity: 0.9;
+}
+
+.lightred {
+  background-color: red;
+  opacity: 0.9;
+}
+
+.legend-item-color {
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  border: none;
+  border: 1px gray solid;
+}
+
+/* Contenedor del cronograma */
+.cronograma-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  height: 100%;
+}
+
+/* Tabla */
+.table-cronograma {
+  width: 95%;
+  border-collapse: collapse;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  color: var(--color-primary-light);
+}
+
+/* Encabezado de la tabla */
+.table-header {
+  background-color: var(--color-4);
+}
+
+.header-item {
+  padding: 10px;
+  text-align: center;
+  border-radius: 60px 60px 0 0;
+}
+
+/* Cuerpo de la tabla */
+.table-body {
+  background-color: var(--color-7);
+}
+
+.body-row {
+  border: none;
+}
+
+.body-item {
+  padding: 0;
+  border: 1px #002f3f solid;
+}
+
+/* Elementos dentro de las celdas */
+.item-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-table-date {
+  gap: 30px;
+}
+
+.modalidad-item-table {
+  height: 220px;
+  justify-content: flex-start;
+}
+
+tr:nth-child(even) td:nth-child(1), tr:nth-child(even) td:nth-child(2)  {
+  background-color: #C5EBF9;
+}
+
+/* Fecha */
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.date-item-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.date-icon {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.date-title {
+  margin: 0;
+}
+
+.date-time {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Módulo */
+.module-label {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Malla curricular */
+.curricular-section {
+  width: 100%;
+  min-height: 55px;
+  padding: 10px 20px;
+  border-bottom: 1px #002f3f solid;
+}
+
+.curricular-section.extra-section {
+  display: flex;
+  align-items: center;
+}
+
+.curricular-section:last-child {
+  border-bottom: none;
+}
+
+.curricular-text {
+  margin: 0;
+}
+
+.curricular-list {
+  padding-left: 0;
+}
+
+.curricular-list-item {
+  margin-left: 20px;
+}
+
+/* Modalidad */
+.modalidad-label {
+  margin: 0;
+  font-weight: bold;
+}
+
+.modalidad-section {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.modalidad-item-table .modalidad-section {
+  border-bottom: 1px solid #002f3f;
+  height: 55px;
+}
+
+.modalidad-item-table .modalidad-section:last-child {
+  border-bottom: none;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.prof-name {
+  text-align: center;
+}
+
+.label {
+  font-size: min(16px, max(2vw, 10px));
+}
+
+.sub-label {
+  font-size: min(14px, max(1.5vw, 8px));
+}
+
+/* Docente */
+.prof-icon {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.prof-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Enlace de clase */
+.class-link-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+}
+
+.class-link-label {
+  display: flex;
+  align-items: center;
+}
+.class-link-text {
+  margin: 0;
+  font-weight: bold;
+}
+
+.class-link-icon {
+  height: 15px;
+  margin-left: 5px;
+}
+
+.class-link-btn {
+  background-color: var(--color-4);
+  color: var(--color-7);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.not-ready {
+  color: #ffffff;
+  background-color: #dd0000;
+}
+
+.class-link-btn:hover {
+  background-color: var(--color-5);
+}
+
+.extra-section{
+  width: 100%;
+  background-color: #B4F9D0;
+}
+
+.red-text {
+  color: red;
+}
+
+/* Warning Styles */
+
+.warning-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.warning-card {
+  width: 600px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 2px solid #01597f;
+  color: #01597f;
+}
+
+.warning-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.warning-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.warning-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.warning-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.warning-details-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.warning-details-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.warning-details-text {
+  font-size: 14px;
+}
+
+.warning-details-list {
+  margin-left: 40px;
+  padding-left: 0;
+}
+
+.warning-details-list-item {
+  margin-top: 8px;
+}
