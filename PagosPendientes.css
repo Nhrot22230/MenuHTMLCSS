@@ -32,7 +32,7 @@
 .pagos-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #002f3f;
 }
 
 .pagos-sub-title-container {
@@ -48,7 +48,7 @@
 .pagos-sub-title {
     margin-left: 5px;
     font-size: 18px;
-    color: #666;
+    color: #01597f;
 }
 
 .pagos-lista-container {
@@ -75,7 +75,7 @@
 .pago-item-section {
     height: 100%;
     padding: 20px;
-    background-color: lightgray;
+    background-color: #f0f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,7 @@
 }
 
 .pago-item-icon {
-    height: 48px;
+    height: 35px;
 }
 
 .pago-mensaje-container {
@@ -125,14 +125,18 @@
 .pago-mensaje-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #002f3f;
     margin: 10px 0 5px;
 }
 
 .pago-mensaje-sub-title {
     font-size: 16px;
-    color: #666;
+    color: #01597f;
     margin: 0;
+}
+
+.pagos-footer-text {
+    color: #01597f;
 }
 
 .pago-link {

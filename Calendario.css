@@ -20,7 +20,7 @@
 
 .calendar-title {
   font-size: 20px;
-  color: #333333;
+  color: #002f3f;
 }
 
 .calendar-nav {
@@ -55,7 +55,7 @@
 .calendar-weekday {
   border: 1px solid #eeeeee;
   font-size: 14px;
-  color: #333333;
+  color: #002f3f;
 }
 
 .calendar-days {
@@ -67,7 +67,7 @@
   font-size: 14px;
   min-height: 100px;
   font-weight: 500;
-  color: #333333;
+  color: #002f3f;
   text-align: center;
   border: 1px solid #eeeeee;
   padding: 8px;
@@ -92,7 +92,7 @@
 
 .item-content-navbar {
   display: flex;
-  color: black;
+  color: #002f3f;
   padding: 12px 0;
   width: 80%;
 }
@@ -160,7 +160,7 @@
 .title {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #002f3f;
 }
 
 .sub-title-container {
@@ -209,7 +209,7 @@
 }
 
 .day-event-enlace {
-    background-color: #333333;
+    background-color: #002f3f;
     color: white;
 }
 

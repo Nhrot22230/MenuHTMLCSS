@@ -139,7 +139,7 @@ body {
 .login-subtitle {
   color: var(--color-7);
   font-weight: 400;
-  font-size: max(var(--font-subtitle), var(--font-size-medium)); /* Responsive font size */
+  font-size: max(1.75vw, var(--font-size-medium)); /* Responsive font size */
 }
 
 /* Login Options Container Styles */
@@ -196,6 +196,7 @@ body {
 }
 
 /* Contact buttons styles */
+
 .contact-buttons {
   position: fixed;
   bottom: 5%;
@@ -203,44 +204,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 1rem;
 }
 
-.contact-wrapper {
-  margin-bottom: 10px;
+.dropdown-msg {
+  width: 0;
+  font-weight: 400;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+#email-btn {
+  background-color: #21bac9;
 }
 
 #whatsapp-btn {
   background-color: #00dd44;
 }
 
-#email-btn {
-  background-color: #21bac9;
-}
 .contact-btn {
   display: flex;
   align-items: center;
   border-radius: 40px 0 0 40px;
   max-width: 200px;
-  transition: width 1s ease;
+  transition: all 1s ease;
   text-decoration: none;
 }
 
 .contact-btn:hover {
-  width: 100%; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
 }
 
 .contact-btn-icon {
-  height: 60px;
-}
-
-.dropdown-msg {
-  width: 100px;
-  font-weight: 400;
-  color: #fff;
-  display: none;
-}
-
-.contact-btn:hover .dropdown-msg {
-  margin-left: 10px;
-  display: block;
+  height: 80px;
 }

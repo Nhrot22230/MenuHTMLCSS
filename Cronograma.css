@@ -82,7 +82,7 @@
 }
 
 .lightgray {
-  background-color: lightgray;
+  background-color: #f0f1f1;
   opacity: 0.9;
 }
 
@@ -111,7 +111,7 @@
 
 /* Tabla */
 .table-cronograma {
-  width: 95%;
+  width: 100%;
   border-collapse: collapse;
   border-radius: 40px 40px 0 0;
   overflow: hidden;
@@ -285,7 +285,7 @@ tr:nth-child(even) td:nth-child(1), tr:nth-child(even) td:nth-child(2)  {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: lightgray;
+  background-color: #f0f1f1;
 }
 
 .class-link-label {
@@ -335,7 +335,7 @@ tr:nth-child(even) td:nth-child(1), tr:nth-child(even) td:nth-child(2)  {
 .warning-container {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 16px;
+  margin: 20px;
 }
 
 .warning-card {

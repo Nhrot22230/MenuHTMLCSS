@@ -1,4 +1,5 @@
 .floating-dashboard {
+  max-height: 700px;
   position: absolute;
   top: 50%;
   right: 50%;
@@ -9,10 +10,10 @@
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
   width: 80%;
   height: fit-content;
   color: #01597f;
+  overflow: hidden;
 }
 
 .item-description-container {
@@ -26,6 +27,7 @@
 
 .item-description-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
@@ -79,8 +81,8 @@
 }
 
 .item-description-btn:hover {
-  background-color: lightgray;
-  color: black;
+  background-color: #f0f1f1;
+  color: #002f3f;
 }
 
 .item-content-container {
@@ -91,11 +93,12 @@
   border: 1px #002f3f solid;
   display: flex;
   flex-direction: column;
+  max-height: 500px;
 }
 
 .item-content-navbar {
   display: flex;
-  color: black;
+  color: #002f3f;
   padding: 12px;
 }
 
@@ -319,45 +322,24 @@ button[type="submit"]:hover {
   background-color: var(--color-primary-light);
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 1201px) {
   .close-item {
     display: none;
   }
-
-  .item-dashboard-container {
-    max-width: 300px;
-  }
 }
 
-@media (max-width: 1100px) {
-  .content {
-    height: 1200px;
-  }
-
-  .portal-main {
-    min-width: 700px;
-  }
-
-  .floating-dashboard {
-    flex-direction: column;
-    width: fit-content;
-  }
-
+@media (max-width: 1200px) {
   .dashboard-close-section {
     display: none;
   }
 
   .item-dashboard-container {
-    width: 100%;
     flex-direction: row;
-  }
-
-  .dashboard-section {
-    max-width: 50%;
+    gap: 2px;
   }
 
   .dashboard-card {
-    height: 100%;
+    height: 150px;
   }
 }
 
@@ -368,13 +350,13 @@ button[type="submit"]:hover {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  color: black;
+  color: #002f3f;
   text-align: justify;
 }
 
 .content-sub-title {
   font-weight: 500;
-  color: black;
+  color: #002f3f;
   margin-bottom: 8px;
 }
 
@@ -405,7 +387,7 @@ button[type="submit"]:hover {
 
 .content-text-list li:before {
   content: "\2022";
-  color: black;
+  color: #002f3f;
   margin: 0 10px;
   display: inline-block;
 }
@@ -431,7 +413,7 @@ button[type="submit"]:hover {
 
 .content-sub-title {
   font-weight: 500;
-  color: #333333;
+  color: #002f3f;
 }
 
 .content-label-warning {
@@ -440,7 +422,7 @@ button[type="submit"]:hover {
   border: none;
   border-radius: 4px;
   background-color: #ffc107;
-  color: #333333;
+  color: #002f3f;
   font-weight: 500;
   transition: background-color 0.3s;
 }
@@ -477,7 +459,7 @@ button[type="submit"]:hover {
 
 .results-label {
   font-size: 2em;
-  color: #333333;
+  color: #002f3f;
 }
 
 .item-description-header-section.evaluacion-details-item {
@@ -493,11 +475,11 @@ button[type="submit"]:hover {
 }
 
 .evaluacion-label-icon {
-  height: 15px;
+  height: 10px;
   margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 .evaluacion-label-text {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 500;
 }

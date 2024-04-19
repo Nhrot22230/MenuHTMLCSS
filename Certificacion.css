@@ -91,6 +91,10 @@
   color: #01597f;
 }
 
+.number-item {
+  text-align: center;
+}
+
 .center-item {
   display: flex;
   justify-content: center;
